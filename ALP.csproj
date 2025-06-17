@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2D47289-FAD6-441B-9AD1-DCE6B925C4FE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ALP</RootNamespace>
+    <AssemblyName>ALP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Renci.SshNet, Version=2024.0.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2024.0.0\lib\net462\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormDrink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDrink.Designer.cs">
+      <DependentUpon>FormDrink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFood.Designer.cs">
+      <DependentUpon>FormFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNota.Designer.cs">
+      <DependentUpon>FormNota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPayment.Designer.cs">
+      <DependentUpon>FormPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTable.Designer.cs">
+      <DependentUpon>FormTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormDrink.resx">
+      <DependentUpon>FormDrink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFood.resx">
+      <DependentUpon>FormFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNota.resx">
+      <DependentUpon>FormNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPayment.resx">
+      <DependentUpon>FormPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTable.resx">
+      <DependentUpon>FormTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nasi Goreng.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mie Goreng.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Batagor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gado-gado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nasi Pecel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Soto Mie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rawon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sop Buntut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sate Ayam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nasi Campur.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ayam Goreng.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ayam Penyet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empal Penyet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bakwan Penyet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bakso Sapi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nasi Putih.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Air Mineral.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Es Degan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Es Jeruk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Es Jeruk Nipis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Es Cendol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Es Buah.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Es teh manis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jus Alpukat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jus Buah Naga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jus Mangga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jus Sirsak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teh Tarik.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wedang Jahe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cuplikan layar 2024-06-05 174216.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Photoroom_20240601_1930491.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
